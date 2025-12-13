@@ -1,0 +1,9 @@
+@import './reset';
+@import './variables';
+
+/* Global style */
+
+body {
+  background-color: $bg-main;
+  color: $text-primary;
+}

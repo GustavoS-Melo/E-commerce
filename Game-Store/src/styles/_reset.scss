@@ -1,0 +1,39 @@
+/* Remove margins and padding from all elements */
+
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1.5;
+    background-color: #0f0f0f; /* Dark background */
+}
+
+/* Remove list-style-type */
+
+ol, ul{
+    list-style-type: none;
+}
+
+/* Remove borders and link styles */
+
+a{
+    text-decoration: none;
+    color: inherit; 
+}
+
+/* Img settings */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent specific sections from going off-screen */
+
+body, html{
+    height: 100%;
+}
