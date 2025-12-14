@@ -10,7 +10,9 @@ export default function GameCard({game}){
 
             <div className="game-card_content">
                 <h3>{game.title}</h3>
-                <span className="game-card_price">R$ {game.price}</span>
+                <span className="game-card_price">
+                    R$ {game.price.toFixed(2).replace('.', ',')}
+                </span>
 
                 <button className="btn btn-primary"  onClick={(e) => e.preventDefault()}>Comprar</button>
             </div>

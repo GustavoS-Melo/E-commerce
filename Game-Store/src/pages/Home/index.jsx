@@ -1,34 +1,11 @@
 import './styles.scss';
+import { getAllGames } from '../../services/gamesService';
 import GameCard from '../../components/GameCard';
 
-const games = [
-    {
-        id: 1,
-        title: 'Grand Theft Auto V',
-        price: '199,90',
-        image: '/images/games/gtav.jpg',
-    },
-    {
-        id: 2,
-        title: 'Elden Ring',
-        price: '249,90',
-        image: '/images/games/elden-ring.jpg',
-    },
-    {
-        id: 3,
-        title: 'God of War Ragnarök',
-        price: '299,90',
-        image: '/images/games/gowr.jpg',
-    },
-    {
-        id: 4,
-        title: 'Red Dead Redemption 2',
-        price: '159,90',
-        image: '/images/games/rdr2.jpg',
-    },
-];
-
 export default function Home() {
+
+    const games = getAllGames();
+
     return (
         <main className="home">
             <section className="hero">
