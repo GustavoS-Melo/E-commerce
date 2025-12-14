@@ -36,15 +36,16 @@ export default function Cart() {
                 {cartItems.map(item => (
                     <li key={item.id} className='cart_item'>
                         <img src={item.image} alt="" />
+                        
+                        <div className="cart_item_info">
+                            <h3 className="cart_item_title">{item.title}</h3>
+                            <p className="cart_item_description">{item.description}</p>
+                        </div>
 
                         <div className="cart_quantity">
                             <button onClick={() => decreaseQuantity(item.id)}>-</button>
                             <span>{item.quantity}</span>
                             <button onClick={() => increaseQuantity(item.id)}>+</button>
-                        </div>
-
-                        <div className="cart_price">
-                            R$ {(item.price * item.quantity).toFixed(2)}
                         </div>
 
                         <button

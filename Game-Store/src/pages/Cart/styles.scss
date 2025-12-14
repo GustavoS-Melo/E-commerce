@@ -67,3 +67,40 @@
         font-weight: 600;
     }
 }
+
+.cart_item {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: #1e1e1e;
+    border-radius: 8px;
+}
+
+.cart_item img {
+    width: 120px;
+    border-radius: 6px;
+}
+
+.cart_item_info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cart_item_title {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.cart_item_description {
+    width: 60%;
+    font-size: 0.9rem;
+    color: #aaa;
+    line-height: 1.4;
+}
+
+.cart_item_price {
+    margin-top: auto;
+    font-weight: bold;
+    color: #6cff9d;
+}
