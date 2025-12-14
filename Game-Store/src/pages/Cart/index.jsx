@@ -2,7 +2,13 @@ import { useCart } from '../../contexts/CartContext';
 import './styles.scss';
 
 export default function Cart(){
-    const { cartItems, removeFromCart, clearCart } = useCart();
+    const { 
+        cartItems, 
+        removeFromCart, 
+        clearCart, 
+        increaseQuantity, 
+        decreaseQuantity, 
+    } = useCart();
 
     const totalPrice = cartItems.reduce(
         (total, item) => total + item.price * item.quantity,
@@ -27,9 +33,10 @@ export default function Cart(){
                     <li key={item.id} className='cart_item'>
                         <img src={item.image} alt="" />
 
-                        <div className="cart_info">
-                            <strong>{item.title}</strong>
-                            <span>Quantidade:{item.quantity}</span>
+                        <div className="cart_quantity">
+                            <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                            <span>{item.quantity}</span>
+                            <button onClick={() => increaseQuantity(item.id)}>+</button>
                         </div>
 
                         <div className="cart_price">

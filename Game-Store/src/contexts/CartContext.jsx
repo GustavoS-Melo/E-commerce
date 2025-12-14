@@ -37,6 +37,26 @@ export function CartProvider({ children }){
         });
     }
 
+    function increaseQuantity(id){
+        setCartItems(prev => 
+            prev.map(item => 
+                item.id === id 
+                ? {...item, quantity: item.quantity + 1} 
+                : item
+            )
+        );
+    }
+
+    function decreaseQuantity(id){
+        setCartItems(prev =>
+            prev.map(item =>
+                item.id === id ? {...item, quantity: item.quantity - 1}
+                : item
+            )
+            .filter(item => item.quantity > 0)
+        );
+    }
+
     function removeFromCart(id){
         setCartItems(prev => prev.filter(item => item.id !== id));
     }
@@ -51,6 +71,8 @@ export function CartProvider({ children }){
             cartItems,
             addToCart,
             removeFromCart,
+            increaseQuantity,
+            decreaseQuantity,
             clearCart,
         }}
         >
