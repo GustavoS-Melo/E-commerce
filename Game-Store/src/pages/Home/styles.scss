@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+.home{
+    width: 100%;
+}
+
+/* Hero */
+
+.hero{
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at top, rgba(124, 92, 255, 015), transparent 60%);
+}
+
+.hero_content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    h1{
+        font-size: $fs-xxl;
+        font-family: $font-title;
+        margin-bottom: 16px;
+
+        span{
+            color: $color-primary;
+        }
+    }
+
+    p{
+        max-width: 520px;
+        color: $text-secondary;
+        margin-bottom: 32px;
+        line-height: 1.6;
+    }
+}
+
+.hero_actions{
+    display: flex;
+    gap: 16px;
+}
