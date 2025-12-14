@@ -1,5 +1,6 @@
 import './styles.scss';
 import { useCart } from '../../contexts/CartContext'
+import { Link } from 'react-router-dom'
 
 export default function Header(){
 
@@ -33,12 +34,12 @@ export default function Header(){
                         Entrar
                     </button>
 
-                    <button className="btn btn--primary header_cart">
+                    <Link to='/cart' className="btn btn--primary header_cart">
                         Carrinho
                         {totalItems > 0 && (
                             <span className='cart-count'>{totalItems}</span>
                         )}
-                    </button>
+                    </Link>
 
                 </div>
             </div>

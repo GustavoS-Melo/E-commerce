@@ -1,10 +1,12 @@
 import { useParams } from 'react-router-dom';
 import './styles.scss';
 import { getGameById } from '../../services/gamesService'
+import { useCart } from '../../contexts/CartContext'
 
 export default function Game() {
     const { id } = useParams();
     const game = getGameById(id);
+    const { addToCart } = useCart();
 
     if (!game) {
         return <p className='not-found'>Jogo não encontrado</p>;
@@ -25,9 +27,15 @@ export default function Game() {
                     </span>
                     <p>{game.description}</p>
 
-                    <button className="btn btn-primary">
-                        Comprar agora
-                    </button>
+                    <button 
+                className="btn btn-primary"  
+                onClick={(e) => {
+                    e.preventDefault();
+                    addToCart(game);
+                }}
+                >
+                    Comprar Agora
+                </button>
                 </div>
 
             </div>
