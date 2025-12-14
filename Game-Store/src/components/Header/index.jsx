@@ -1,10 +1,12 @@
 import './styles.scss';
 import { useCart } from '../../contexts/CartContext'
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
 export default function Header(){
 
     const { cartItems } = useCart();
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const totalItems = cartItems.reduce(
         (total, item) => total + item.quantity,
@@ -43,7 +45,30 @@ export default function Header(){
                     </Link>
 
                 </div>
+
+                <button
+                    className="header_menu_btn"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    aria-label="Open menu">
+                    <span />
+                    <span />
+                    <span />
+                </button>
+
             </div>
+
+            {menuOpen && (
+                <nav className="header_mobile_nav">
+                    <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+                    <Link to="/" onClick={() => setMenuOpen(false)}>Loja</Link>
+                    <Link to="/" onClick={() => setMenuOpen(false)}>Promoções</Link>
+                    <Link to="/" onClick={() => setMenuOpen(false)}>Contato</Link>
+                    <Link to="/cart" onClick={() => setMenuOpen(false)}>
+                        Carrinho ({totalItems})
+                    </Link>
+                </nav>
+)}
+                        
         </header>
     );
 }

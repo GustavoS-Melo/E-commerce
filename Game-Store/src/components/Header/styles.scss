@@ -16,7 +16,7 @@
 }
 
 .header_cart {
-  position: relative;
+    position: relative;
 }
 
 /* Logo */
@@ -29,7 +29,7 @@
     font-weight: $fw-bold;
     letter-spacing: 0.08em;
 
-    span{
+    span {
         color: $color-primary;
     }
 }
@@ -39,18 +39,18 @@
     display: flex;
     gap: 24px;
 
-    a{
+    a {
         font-family: $font-text;
         font-size: $fs-sm;
         color: $text-secondary;
         position: relative;
         transition: color 0.2 ease;
 
-        &:hover{
+        &:hover {
             color: $text-primary;
         }
 
-        &::after{
+        &::after {
             content: '';
             position: absolute;
             left: 0;
@@ -61,7 +61,7 @@
             transition: width 0.2 ease;
         }
 
-        &:hover::after{
+        &:hover::after {
             width: 100%;
         }
     }
@@ -69,14 +69,14 @@
 
 /* Actions */
 
-.header_actions{
+.header_actions {
     display: flex;
     gap: 12px;
 }
 
 /* Btns */
 
-.btn{
+.btn {
     padding: 8px 14px;
     font-size: $fs-sm;
     border-radius: 6px;
@@ -86,35 +86,81 @@
     font-family: $font-text;
 }
 
-.brn--ghost{
+.brn--ghost {
     background: transparent;
     color: $text-secondary;
     border-color: $color-primary;
 
-    &:hover{
+    &:hover {
         color: $text-primary;
         border-color: $color-primary;
     }
 }
 
-.btn--primary{
+.btn--primary {
     background: $color-primary;
     color: #fff;
 
-    &:hover{
+    &:hover {
         background: $color-primary-hover;
     }
 }
 
 .cart-count {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  background: #b3ff00;
-  color: #000;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 2px 6px;
-  border-radius: 999px;
-  line-height: 1;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #b3ff00;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 999px;
+    line-height: 1;
+}
+
+.header_menu_btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span {
+        width: 24px;
+        height: 2px;
+        background: #fff;
+    }
+}
+
+.header_mobile_nav {
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .header_nav,
+    .header_actions {
+        display: none;
+    }
+
+    .header_menu_btn {
+        display: flex;
+    }
+
+    .header_mobile_nav {
+        display: flex;
+        flex-direction: column;
+        background: #111;
+        padding: 16px;
+        gap: 16px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+    }
 }
