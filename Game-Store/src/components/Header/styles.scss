@@ -1,0 +1,103 @@
+@import '../../styles/variables';
+
+.header {
+    width: 100%;
+    background: $bg-secondary;
+    border-bottom: 1px solid $border-color;
+}
+
+.header_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+
+.header_logo {
+    font-family: $font-title;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    color: $text-primary;
+    font-weight: $fw-bold;
+    letter-spacing: 0.08em;
+
+    span{
+        color: $color-primary;
+    }
+}
+
+/* Nav */
+.header_nav {
+    display: flex;
+    gap: 24px;
+
+    a{
+        font-family: $font-text;
+        font-size: $fs-sm;
+        color: $text-secondary;
+        position: relative;
+        transition: color 0.2 ease;
+
+        &:hover{
+            color: $text-primary;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: $color-primary;
+            transition: width 0.2 ease;
+        }
+
+        &:hover::after{
+            width: 100%;
+        }
+    }
+}
+
+/* Actions */
+
+.header_actions{
+    display: flex;
+    gap: 12px;
+}
+
+/* Btns */
+
+.btn{
+    padding: 8px 14px;
+    font-size: $fs-sm;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2 ease;
+    font-family: $font-text;
+}
+
+.brn--ghost{
+    background: transparent;
+    color: $text-secondary;
+    border-color: $color-primary;
+
+    &:hover{
+        color: $text-primary;
+        border-color: $color-primary;
+    }
+}
+
+.btn--primary{
+    background: $color-primary;
+    color: #fff;
+
+    &:hover{
+        background: $color-primary-hover;
+    }
+}

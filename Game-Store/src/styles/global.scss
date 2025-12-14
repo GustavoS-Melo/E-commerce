@@ -6,4 +6,13 @@
 body {
   background-color: $bg-main;
   color: $text-primary;
+  font-family: $font-text;
+  font-size: $fs-md;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.04em;
 }
