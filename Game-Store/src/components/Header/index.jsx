@@ -19,8 +19,8 @@ export default function Header(){
 
                 {/* Actions btns */}
                 <div className="header_actions">
-                    <buttom className="btn btn--ghost">Entrar</buttom>
-                    <buttom className="btn btn--primary">Carrinho</buttom>
+                    <button className="btn btn--ghost">Entrar</button>
+                    <button className="btn btn--primary">Carrinho</button>
                 </div>
             </div>
         </header>

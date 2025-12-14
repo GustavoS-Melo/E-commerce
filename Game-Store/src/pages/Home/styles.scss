@@ -1,34 +1,34 @@
 @import '../../styles/variables';
 
-.home{
+.home {
     width: 100%;
 }
 
 /* Hero */
 
-.hero{
+.hero {
     min-height: calc(100vh - 72px);
     display: flex;
     align-items: center;
     background: radial-gradient(circle at top, rgba(124, 92, 255, 015), transparent 60%);
 }
 
-.hero_content{
+.hero_content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 
-    h1{
+    h1 {
         font-size: $fs-xxl;
         font-family: $font-title;
         margin-bottom: 16px;
 
-        span{
+        span {
             color: $color-primary;
         }
     }
 
-    p{
+    p {
         max-width: 520px;
         color: $text-secondary;
         margin-bottom: 32px;
@@ -36,7 +36,26 @@
     }
 }
 
-.hero_actions{
+.hero_actions {
     display: flex;
     gap: 16px;
+}
+
+/* Game Section */
+.games {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 24px;
+
+    h2 {
+        font-family: $font-title;
+        font-size: $fs-xl;
+        margin-bottom: 32px;
+    }
+}
+
+.games_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
 }

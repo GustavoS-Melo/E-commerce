@@ -4,7 +4,7 @@ export default function GameCard({game}){
     return(
         <div className="game-card">
             <div className="game-card_image">
-                <img src="{game.image}" alt="" />
+                <img src={game.image} alt={game.title} />
             </div>
 
             <div className="game-card_content">
