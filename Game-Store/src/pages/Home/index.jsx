@@ -1,10 +1,12 @@
 import './styles.scss';
 import { getAllGames } from '../../services/gamesService';
 import GameCard from '../../components/GameCard';
+import { useRef } from 'react'
 
 export default function Home() {
 
     const games = getAllGames();
+    const gamesRef = useRef(null);
 
     return (
         <main className="home">
@@ -20,14 +22,21 @@ export default function Home() {
                     </p>
 
                     <div className="hero_actions">
-                        <button className="btn btn--primary">Explorar Jogos</button>
+                        <button 
+                            className="btn btn--primary" onClick={() => {
+                                gamesRef.current?.scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }}>
+                            Explorar Jogos
+                        </button>
                         <button className="btn btn--ghost">Ver ofertas</button>
                     </div>
                 </div>
             </section>
 
             <section className="games">
-                <h2>Jogos em destaque</h2>
+                <h2 ref={gamesRef}>Jogos em destaque</h2>
 
                 <div className="games_grid">
                     {games.map(game => (
