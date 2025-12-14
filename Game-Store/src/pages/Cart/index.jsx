@@ -1,13 +1,17 @@
 import { useCart } from '../../contexts/CartContext';
 import './styles.scss';
+import { useNavigate } from 'react-router-dom';
 
-export default function Cart(){
-    const { 
-        cartItems, 
-        removeFromCart, 
-        clearCart, 
-        increaseQuantity, 
-        decreaseQuantity, 
+export default function Cart() {
+
+    const navigate = useNavigate();
+
+    const {
+        cartItems,
+        removeFromCart,
+        clearCart,
+        increaseQuantity,
+        decreaseQuantity,
     } = useCart();
 
     const totalPrice = cartItems.reduce(
@@ -15,7 +19,7 @@ export default function Cart(){
         0
     );
 
-    if (cartItems.lenght === 0){
+    if (cartItems.lenght === 0) {
         return (
             <div className="cart container">
                 <h2>Seu carrinho está vazio</h2>
@@ -43,7 +47,7 @@ export default function Cart(){
                             R$ {(item.price * item.quantity).toFixed(2)}
                         </div>
 
-                        <button 
+                        <button
                             className="btn btn--ghost"
                             onClick={() => removeFromCart(item.id)}>
                             Remover
@@ -55,8 +59,13 @@ export default function Cart(){
             <div className="cart_footer">
                 <strong>Total: R$ {totalPrice.toFixed(2)}</strong>
 
-                <button className="btn btn--primary" onClick={clearCart}>
-                    Finalizar Compra
+                <button
+                    className="btn btn--primary"
+                    onClick={() => {
+                        clearCart();
+                        navigate('/checkout/success'); 
+                    }}>
+                    Finalizar compra
                 </button>
             </div>
         </div>
