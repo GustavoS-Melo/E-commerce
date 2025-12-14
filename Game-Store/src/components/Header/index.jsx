@@ -15,16 +15,17 @@ export default function Header(){
         <header className='header'>
             <div className="header_container">
                 {/*Logo*/}
-                <div className="header_logo">
+                <Link to='/' className="header_logo">
                     <span>Black</span>Screen
-                </div>
+                </Link>
 
                 {/*Nav*/}
                 <nav className="header_nav">
-                    <a href="#">Home</a>
-                    <a href="#">Loja</a>
-                    <a href="#">Promoções</a>
-                    <a href="#">Contato</a>
+                    <Link to='/' >Home</Link>
+                    <Link to='/' >Loja</Link>
+                    <Link to='/' >Promoções</Link>
+                    <Link to='/' >Contato</Link>
+                    
                 </nav>
 
                 {/* Actions btns */}
