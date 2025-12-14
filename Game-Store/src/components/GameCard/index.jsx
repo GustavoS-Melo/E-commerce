@@ -1,7 +1,11 @@
 import './styles.scss';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../contexts/CartContext'
 
 export default function GameCard({game}){
+
+    const { addToCart } = useCart();
+
     return(
     <Link to={`/game/${game.id}`} className="game-card">
             <div className="game-card_image">
@@ -14,7 +18,15 @@ export default function GameCard({game}){
                     R$ {game.price.toFixed(2).replace('.', ',')}
                 </span>
 
-                <button className="btn btn-primary"  onClick={(e) => e.preventDefault()}>Comprar</button>
+                <button 
+                className="btn btn-primary"  
+                onClick={(e) => {
+                    e.preventDefault();
+                    addToCart(game);
+                }}
+                >
+                    Comprar
+                </button>
             </div>
         </Link>
     );

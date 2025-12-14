@@ -15,6 +15,10 @@
     justify-content: space-between;
 }
 
+.header_cart {
+  position: relative;
+}
+
 /* Logo */
 
 .header_logo {
@@ -100,4 +104,17 @@
     &:hover{
         background: $color-primary-hover;
     }
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #b3ff00;
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 999px;
+  line-height: 1;
 }
