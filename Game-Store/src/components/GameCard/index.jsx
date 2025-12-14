@@ -1,8 +1,9 @@
 import './styles.scss';
+import { Link } from 'react-router-dom';
 
 export default function GameCard({game}){
     return(
-        <div className="game-card">
+    <Link to={`/game/${game.id}`} className="game-card">
             <div className="game-card_image">
                 <img src={game.image} alt={game.title} />
             </div>
@@ -11,8 +12,8 @@ export default function GameCard({game}){
                 <h3>{game.title}</h3>
                 <span className="game-card_price">R$ {game.price}</span>
 
-                <button className="btn btn-primary">Comprar</button>
+                <button className="btn btn-primary"  onClick={(e) => e.preventDefault()}>Comprar</button>
             </div>
-        </div>
+        </Link>
     );
 }

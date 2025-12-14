@@ -2,7 +2,7 @@
 
 .game-card{
     background: #141414;
-    color: #ffffff;
+    color: inherit;
     border: 1px solid $border-color;
     border-radius: 12px;
     overflow: hidden;
@@ -10,6 +10,7 @@
     transition: transform 0.2 ease, box-shadow 0.2 ease;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
 
     &:hover{
         transform: translateY(-6px);

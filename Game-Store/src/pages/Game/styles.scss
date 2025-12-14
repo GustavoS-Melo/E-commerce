@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.game-details {
+  padding: 60px 24px;
+}
+
+.game-details_container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.game-details_image img {
+  width: 70%;
+  border-radius: 16px;
+}
+
+.game-details_info {
+  color: #fff;
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .price {
+    display: block;
+    font-size: 24px;
+    color: #b3ff00;
+    margin-bottom: 24px;
+  }
+
+  p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+}
+
+.not-found {
+  color: #fff;
+  text-align: center;
+  padding: 80px;
+}
