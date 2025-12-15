@@ -30,6 +30,8 @@ Game Browsing: The games section displays title, image, and description. An "Exp
 
 Responsive Layout: The layout is fully responsive, providing a great experience on both desktop and mobile devices;
 
+To access this project, simply go to: https://blackscreengames.netlify.app
+
     PT-BR:
 
 BlackScreen Games - E-commerce de Jogos Digitais
@@ -61,3 +63,5 @@ Persistência: Os itens do carrinho permanecem salvos no localStorage, garantind
 Exploração de Jogos: A seção de jogos é apresentada com título, imagem e descrição. Um botão "Explorar Jogos" leva o usuário para a seção de jogos;
 
 Layout Responsivo: O layout é responsivo, oferecendo uma boa experiência tanto em desktop quanto em dispositivos móveis;
+
+Para acessar esse projeto, acesse: https://blackscreengames.netlify.app
