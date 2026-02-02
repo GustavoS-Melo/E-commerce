@@ -1,67 +1,36 @@
-    EN:
+# E-commerce — Projeto de Portfólio
 
-BlackScreen Games – Digital Games E-commerce
+Este projeto consiste em uma aplicação de e-commerce desenvolvida com foco em estudo e portfólio, com o objetivo de praticar conceitos de front-end, organização de código e construção de interfaces funcionais.
 
-This project was developed with the purpose of serving as a portfolio piece. It was built using React, React Router, and Context API to manage the shopping cart, as well as localStorage to persist data between sessions.
+O projeto não possui fins comerciais e foi criado para demonstrar habilidades técnicas em um cenário próximo ao mundo real.
 
-Technologies Used:
+## Sobre o projeto
+A aplicação simula o funcionamento básico de um e-commerce, incluindo listagem de produtos, navegação entre páginas e interação com o usuário. Durante o desenvolvimento, o foco foi criar uma interface clara, responsiva e organizada, priorizando uma boa experiência de uso.
 
-React (Main library);
+Este projeto representa um passo importante no meu aprendizado e consolidação de conceitos fundamentais do desenvolvimento front-end.
 
-React Router DOM (Page navigation);
+## Funcionalidades
+- Listagem de produtos
+- Navegação entre páginas
+- Interface responsiva
+- Interações dinâmicas com JavaScript
 
-Context API (State management);
+## Tecnologias utilizadas
+- HTML5
+- CSS3
+- JavaScript
+- Git e GitHub
 
-localStorage (Data persistence between sessions);
+## Deploy
+O projeto está hospedado no Netlify.
 
-Sass (Styling);
+Acesso ao projeto:  
+https://blackscreengames.netlify.app
 
-Vite (Bundling tool);
+## Objetivo do projeto
+- Praticar conceitos de desenvolvimento front-end
+- Trabalhar organização de código e estrutura de projeto
+- Simular um cenário real de e-commerce para portfólio
 
-Features:
-
-Shopping Cart: Add games to the cart, with features to increase/decrease quantity and remove items;
-
-Fake Checkout: Navigate through success and error checkout pages. Simulates a purchase with a 30% chance of failure;
-
-Persistence: Cart items are saved in localStorage, ensuring cart continuity between sessions;
-
-Game Browsing: The games section displays title, image, and description. An "Explore Games" button scrolls the user to the games section;
-
-Responsive Layout: The layout is fully responsive, providing a great experience on both desktop and mobile devices;
-
-To access this project, simply go to: https://blackscreengames.netlify.app
-
-    PT-BR:
-
-BlackScreen Games - E-commerce de Jogos Digitais
-
-Este projeto foi desenvolvido com o propósito de servir como portfólio, nesse projeto foi utilizado React, React Router e Context API para gerenciar o carrinho de compras, além de usar localStorage para persistência entre as sessões.
-
-Tecnologias Utilizadas:
-
-React (Biblioteca principal);
-
-React Router DOM (Navegação entre páginas);
-
-Context API (Gerenciamento de estado);
-
-localStorage (Persistência de dados entre sessões);
-
-Sass (Estilização);
-
-Vite (Ferramenta de bundling);
-
-Funcionalidades:
-
-Carrinho de compras: Adicione jogos ao carrinho, com funcionalidades de aumentar/diminuir quantidade e remoção de itens;
-
-Checkout Fake: Navegue pelas páginas de sucesso e erro no checkout. Simula uma compra com 30% de chance de erro;
-
-Persistência: Os itens do carrinho permanecem salvos no localStorage, garantindo a continuidade do carrinho entre sessões;
-
-Exploração de Jogos: A seção de jogos é apresentada com título, imagem e descrição. Um botão "Explorar Jogos" leva o usuário para a seção de jogos;
-
-Layout Responsivo: O layout é responsivo, oferecendo uma boa experiência tanto em desktop quanto em dispositivos móveis;
-
-Para acessar esse projeto, acesse: https://blackscreengames.netlify.app
+## Observações
+Este projeto não realiza transações reais e não possui integração com sistemas de pagamento ou banco de dados, sendo utilizado exclusivamente para fins educacionais e demonstrativos.
